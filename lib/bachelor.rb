@@ -50,4 +50,11 @@ end
 
 def get_average_age_for_season(data, season)
   # code here
+  sum = 0
+  num = 0
+  data[season].each do |contest_hash|
+    sum += contest_hash["age"].to_i
+    num += 1
+  end
+  return (sum.to_f/num).round 
 end
